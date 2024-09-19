@@ -15,6 +15,9 @@
 :root {
     --primary-color: #fff;
     --secondary-color: #F8F8F8;
+    --terciary-color: #acacac;
+    --quaternary-color: #555555;
+    --quintenary-color: #bebebe;
     --Josefin-Sans: 'Josefin Sans', 'sans-serif';
 }
 
@@ -22,6 +25,8 @@ body {
     background-color: var(--secondary-color);
     font-family: var(--Josefin-Sans);
     color: #555;;
+    animation: fade-in 1.5s ease-in-out forwards;
+    background-color: white;
 }
 
 /* -- CSS Code for Desktop */
@@ -106,4 +111,159 @@ body {
         align-items: center;
     }  
 }
+@media (width < 774px){
+    /* Project Header */
+    header {
+        background-color: var(--primary-color);
+        width: 100%;
+        position: fixed;
+        height: fit-content;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    /* Menu Button*/
+    .menu button {
+        margin:10px;
+        padding: 16px 26px;
+        border-radius: 6px;
+        border: none;
+        z-index: 3;
+        cursor: pointer;
+
+        font-family: var(--Josefin-Sans);
+        font-size: 1em;
+        color: var(--quaternary-color);
+    }
+    .menu button:hover {
+        background-color: #acacac;
+        color: black;
+    }
+    .menu button:active {
+        background-color: var(--secondary-color);
+    }
+
+    /* Navigation ITEMS and SOCIAL MEDIAS */
+    nav {
+        background-color: rgba(127, 255, 212, 0);
+        width: 100%;
+        display: flex;
+        justify-content: end;
+     
+        
+    }
+    .menu_items {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        
+    }
+
+    .menu_items > a  {
+        width: 100%;
+        background-color: var(--primary-color);
+        text-decoration: none;
+        list-style: none;
+        color: var(--quaternary-color);
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 20px;
+
+        transition: 0.3s ease;
+    }
+
+    .menu_items > a:hover {
+        background-color: var(--quintenary-color);
+    }
+
+    .social_medias {
+        background-color: var(--primary-color);
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .social_medias li {
+        background-color: var(--primary-color);
+        width: 100%;
+        display: block;
+    }
+
+    .social_medias li:hover {
+        background-color: var(--quintenary-color);
+    }
+
+    .social_medias li a {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        text-decoration: none;
+        color: #555555;
+        transition: background-color 0.3s ease;
+    }
+
+    .social_medias li a:hover {
+        background-color: #acacac;
+    }
+
+    /* -- Main -- */
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        background-color: aqua;
+        height: 100vh;
+        width: 100%;
+        background-image: url(../src/img/vanilla2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > .image img{
+        width: 350px;
+        height: 350px;
+    }
+
+    /* -- Footer -- */
+    footer {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+        justify-content:center;
+        align-items: center;
+    }  
+}
+
+
+
+
+/* -- Transição para branco -- */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
