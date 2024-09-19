@@ -114,7 +114,7 @@ body {
 @media (width < 774px){
     /* Project Header */
     header {
-        background-color: var(--primary-color);
+        background-color: none;
         width: 100%;
         position: fixed;
         height: fit-content;
@@ -123,18 +123,25 @@ body {
         flex-wrap: wrap;
     }
 
+    .menu {
+        background-color: #fff;
+        width: 100%;
+        z-index: 4;
+
+    }
     /* Menu Button*/
-    .menu button {
+    .menu > button {
         margin:10px;
         padding: 16px 26px;
         border-radius: 6px;
         border: none;
-        z-index: 3;
         cursor: pointer;
 
         font-family: var(--Josefin-Sans);
         font-size: 1em;
         color: var(--quaternary-color);
+
+
     }
     .menu button:hover {
         background-color: #acacac;
@@ -145,12 +152,13 @@ body {
     }
 
     /* Navigation ITEMS and SOCIAL MEDIAS */
-    nav {
+    nav#menu_items {
         background-color: rgba(127, 255, 212, 0);
         width: 100%;
         display: flex;
         justify-content: end;
-     
+        z-index: 1;
+        transform: translateY(-1000px);
         
     }
     .menu_items {
@@ -162,8 +170,6 @@ body {
         height: 50vh;
         overflow-y: auto;
         overflow-x: hidden;
-        
-        
     }
 
     .menu_items > a  {
